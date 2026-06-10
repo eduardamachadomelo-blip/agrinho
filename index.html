@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Agrinho News | Segurança Alimentar e Sustentabilidade</title>
+    <meta name="description" content="Portal de notícias sobre segurança alimentar, produção sustentável e agricultura familiar no Paraná.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="theme-color" content="#2c5f2d">
+    <style>
+        /* style.css será inserido inline para manter estrutura separada */
+    </style>
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>Agrinho<span class="logo-light">Magazine</span></span>
+                </a>
+                <!-- Desktop nav -->
+                <nav class="nav-desktop">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link active">Início</a></li>
+                        <li><a href="#" class="nav-link">Segurança Alimentar</a></li>
+                        <li><a href="#" class="nav-link">Produção Sustentável</a></li>
+                        <li><a href="#" class="nav-link">Agricultura Familiar</a></li>
+                        <li><a href="#" class="nav-link">Dados</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Alternar modo escuro">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun" style="display: none;"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile navigation (overlay) -->
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-header">
+                    <span>Menu</span>
+                    <button class="close-menu" id="closeMenuBtn" aria-label="Fechar"><i class="fas fa-times"></i></button>
+                </div>
+                <ul class="mobile-nav-list">
+                    <li><a href="#" class="mobile-nav-link">Início</a></li>
+                    <li><a href="#" class="mobile-nav-link">Segurança Alimentar</a></li>
+                    <li><a href="#" class="mobile-nav-link">Produção Sustentável</a></li>
+                    <li><a href="#" class="mobile-nav-link">Agricultura Familiar</a></li>
+                    <li><a href="#" class="mobile-nav-link">Dados e Indicadores</a></li>
+                    <li><a href="#" class="mobile-nav-link">Agroecologia</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- HERO SECTION (Magazine Style) -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-category">Destaque</span>
+                    <h1>Segurança alimentar e produção sustentável no Paraná</h1>
+                    <p>Estado combina alta produtividade agrícola com políticas integradas, atingindo 84,7% dos domicílios em segurança alimentar, acima da média nacional.</p>
+                    <div class="hero-meta">
+                        <span><i class="far fa-calendar-alt"></i> Maio 2026</span>
+                        <span><i class="fas fa-chart-line"></i> +107 mil pessoas superaram insegurança</span>
+                    </div>
+                    <a href="#" class="btn-primary">Leia a reportagem completa <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/600x400/2c5f2d/ffffff?text=Agricultura+Sustentável" alt="Produção sustentável no Paraná" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- FEED DE NOTÍCIAS (dinâmico) -->
+        <section class="news-feed">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Últimas notícias <i class="fas fa-newspaper"></i></h2>
+                    <div class="feed-filters">
+                        <button class="filter-chip active" data-filter="all">Todas</button>
+                        <button class="filter-chip" data-filter="sustentabilidade">Sustentabilidade</button>
+                        <button class="filter-chip" data-filter="seguranca">Segurança Alimentar</button>
+                        <button class="filter-chip" data-filter="producao">Produção</button>
+                    </div>
+                </div>
+                <div class="cards-grid" id="newsContainer">
+                    <!-- cards serão renderizados via JS -->
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-pulse"></i> Carregando notícias...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTAQUES INFO BOX -->
+        <section class="highlights">
+            <div class="container highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-chart-simple"></i>
+                    <h3>84,7% em segurança alimentar</h3>
+                    <p>Paraná supera média nacional (75,8%) e reduz insegurança para 15,3% em 2024.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-tractor"></i>
+                    <h3>+276 mil agricultores familiares</h3>
+                    <p>75% dos estabelecimentos rurais, gerando emprego e abastecendo mercados institucionais.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Líder em orgânicos</h3>
+                    <p>3.916 produtores orgânicos certificados — 16% do Brasil, crescimento de 70%.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container footer-inner">
+                <div class="footer-brand">
+                    <i class="fas fa-leaf"></i> Agrinho Magazine
+                    <p>Informação, sustentabilidade e segurança alimentar.</p>
+                </div>
+                <div class="footer-links">
+                    <span>Fontes: IBGE, SEAB, IV Plano Estadual de SAN, IDR-Paraná</span>
+                    <span>© 2026 Agrinho News - Conteúdo baseado em dados oficiais</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // JavaScript (ES6+) será inserido a seguir
+    </script>
+</body>
+</html>
